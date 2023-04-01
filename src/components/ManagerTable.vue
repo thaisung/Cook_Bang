@@ -21,7 +21,7 @@
             <button class="bg-blue-600 rounded-full px-5 py-3 text-gray-200 text-[15px] hover:bg-blue-500">Tạo Hóa Đơn Mới cho bàn ăn</button>
         </div> -->
         <div v-on:click="counter.Show_Table_Hoa_don = false;" class="flex flex-col px-4 py-2 cursor-pointer  justify-between w-full font-bold border-b-[1px] border-slate-900">
-            <button class="bg-blue-600 rounded-full px-5 py-3 text-gray-200 hover:bg-blue-500">Đăng xuất</button>
+            <button v-on:click="counter.Log_out_NVQL();" class="bg-blue-600 rounded-full px-5 py-3 text-gray-200 hover:bg-blue-500">Đăng xuất</button>
         </div>
     </div>
 

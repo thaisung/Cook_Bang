@@ -40,6 +40,8 @@ export const useCounterStore = defineStore('counter', {
       Username: '', Pasword: '', Show_Table_Hoa_don: false,
       Tab_Manager: 1, Tab_Chef: 1, Show_bang_khach_hang: false,
       Show_chitiet_HD: 0, Search: '', Show_luachon_NL: false, Show_luachon_TT: false, Bep_HT: 'Còn hàng', Bep_TT: 'Hoàn thành',
+      NVQL_data: { username: '', password: '', Data: '' }, NVB_data: { username: '', password: '', Data: '' },
+      DSHD: '',
     }
   },
 
@@ -97,6 +99,22 @@ export const useCounterStore = defineStore('counter', {
       this.update_dist_new = await axios({ method: 'post', url: this.URLServer + '/dish/update-dish-status', data: { 'Update_mon_an': this.Data_Food_King } });
       this.update_dist_new = await this.update_dist_new.data;
     },
+
+    // 1/4 Bang gui api/////////////////////////////////////////////
+    async Log_in_NVQL() {
+      this.NVQL_data.Data = await axios({ method: 'post', url: this.URLServer + '/api/v1/account/login', data: { "userCode": this.NVQL_data.username, "password": this.NVQL_data.password } });
+      this.NVQL_data.Data = await this.NVQL_data.Data;
+    },
+    async Log_out_NVQL() {
+      this.NVQL_data.Data = await axios({ method: 'get', url: this.URLServer + '/api/v1/account/logout', });
+      this.NVQL_data.Data = await this.NVQL_data.Data;
+    },
+    async DSHD_data() {
+      this.DSHD = await axios({ method: 'get', url: this.URLServer + '/api/v1/invoice/get-data', });
+      this.DSHD = await this.DSHD;
+    },
+
+
 
     //////////////////////////////////////////////////////////////////////////
     Dat_hang_theo_lan() {

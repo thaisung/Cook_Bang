@@ -16,9 +16,9 @@
       </div>
       <div class="flex flex-col justify-center items-center gap-3 border-[1px] border-lime-500 px-5 py-5 rounded">
         <h1 class="font-bold text-gray-300 text-[23px]">Đăng nhập NVQL</h1>
-        <input placeholder="Tài khoản" v-model="counter.Username" type="text" class="bg-gray-700 py-2 px-2 border-slate-500 rounded text-gray-200 w-[300px]" />
-        <input placeholder="Mật khẩu" v-model="counter.Password"  type="password" class="bg-gray-700 py-2 px-2 border-slate-500 rounded text-gray-200 w-[300px]"/>
-        <button class="font-bold text-lime-500 text-[15px] hover:bg-slate-600 bg-slate-700 px-2 py-2 rounded border-b-[2px] border-lime-500" v-on:click="counter.Login_Account(); counter.Show_Table_Hoa_don = true;">Đăng nhập</button>
+        <input placeholder="Tài khoản" v-model="counter.NVQL_data.username" type="text" class="bg-gray-700 py-2 px-2 border-slate-500 rounded text-gray-200 w-[300px]" />
+        <input placeholder="Mật khẩu" v-model="counter.NVQL_data.password"  type="password" class="bg-gray-700 py-2 px-2 border-slate-500 rounded text-gray-200 w-[300px]"/>
+        <button class="font-bold text-lime-500 text-[15px] hover:bg-slate-600 bg-slate-700 px-2 py-2 rounded border-b-[2px] border-lime-500" v-on:click="counter.Log_in_NVQL();">Đăng nhập</button>
         <!-- <input placeholder="Số bàn" type="text" class="bg-gray-700 py-2 px-2 border-slate-500 rounded text-gray-200 w-[300px]"/> -->
       </div>
     </div>
