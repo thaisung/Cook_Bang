@@ -20,9 +20,9 @@
         <div v-on:click="counter.Show_Table_Hoa_don = false;" class="flex flex-col px-4 py-4 cursor-pointer  justify-between w-full font-bold border-b-[1px] border-slate-900">
             <button class="bg-blue-600 rounded-full px-5 py-3 text-gray-200 hover:bg-blue-500">Đăng xuất</button>
         </div>
-        <div v-on:click="counter.Show_bang_khach_hang=!counter.Show_bang_khach_hang" class="flex flex-col px-4 py-4 cursor-pointer  justify-between w-full font-bold border-b-[1px] border-slate-900">
+        <!-- <div v-on:click="counter.Show_bang_khach_hang=!counter.Show_bang_khach_hang" class="flex flex-col px-4 py-4 cursor-pointer  justify-between w-full font-bold border-b-[1px] border-slate-900">
             <button class="bg-blue-600 rounded-full px-5 py-3 text-gray-200 hover:bg-blue-500">Chi tiết hóa đơn</button>
-        </div>
+        </div> -->
         <!-- <div class="flex flex-col px-4 py-4  justify-between w-full font-bold border-b-[1px] border-slate-900">
             {{ counter.Table_Code_Oder }}
         </div> -->

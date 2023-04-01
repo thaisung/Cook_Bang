@@ -32,6 +32,7 @@ export const useCounterStore = defineStore('counter', {
         Trangmieng: [{ Ten: 'Chè đậu ngự', Thongtin: 'Tươi ngon\r\nSize M', Gia: 1000, Anh: 'https://i.ytimg.com/vi/cZ1SBk313C4/maxresdefault.jpg', SL: 0, DG: 0, CH: 'Còn hàng', CHT: 'Chưa hoàn thành', Show_CH: 0, Show_CHT: 0 }, { Ten: 'Chè bưởi', Thongtin: 'Tươi ngon\r\nSize M', Gia: 1000, Anh: 'https://i.ytimg.com/vi/cZ1SBk313C4/maxresdefault.jpg', SL: 0, DG: 0, CH: 'Còn hàng', CHT: 'Chưa hoàn thành', Show_CH: 0, Show_CHT: 0 }, { Ten: 'chè mít', Thongtin: 'Tươi ngon\r\nSize M', Gia: 1000, Anh: 'https://i.ytimg.com/vi/cZ1SBk313C4/maxresdefault.jpg', SL: 0, DG: 0, CH: 'Còn hàng', CHT: 'Chưa hoàn thành', Show_CH: 0, Show_CHT: 0 }],
         Tong: { SL: 0, TT: 0, DG: 0 }
       },
+      Tong_All: { SL: 0, TT: 0, DG: 0 },
       Data_Food_King_NVQL: [],
       Data_Food_King_NVB: [],
       Table_Code_Oder: { Number_Table_Oder: 1, Coder_Oder: '012356', Status: 'Chưa thanh toán', List_Food: [] },
@@ -100,7 +101,12 @@ export const useCounterStore = defineStore('counter', {
     //////////////////////////////////////////////////////////////////////////
     Dat_hang_theo_lan() {
       this.Data_Food_King.Thoi_gian = 123;
-      this.Data_Food_King_NVB.push(JSON.parse(JSON.stringify(this.Data_Food_King)));
+      let abc = JSON.parse(JSON.stringify(this.Data_Food_King));
+      this.Data_Food_King_NVB.push(abc);
+
+      this.Tong_All.SL = this.Tong_All.SL + abc.Tong.SL
+      this.Tong_All.TT = this.Tong_All.TT + abc.Tong.TT
+
     },
 
     Reset_Ban() {

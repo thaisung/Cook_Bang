@@ -75,6 +75,11 @@
                         <h1 class="w-[15%]">{{ j.Gia*j.SL }}</h1>
                     </div>
                 </div>
+                <div class="flex font-semibold text-yellow-400 text-[18px]">
+                  <h1 class="w-[65%]">Tổng:</h1>
+                  <h1 class="w-[20%]">{{ counter.Tong_All.SL }}</h1>
+                  <h1 class="w-[15%]">{{ counter.Tong_All.TT }}</h1>
+                </div>
             </div>  
           </div>
         </div>

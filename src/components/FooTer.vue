@@ -66,7 +66,7 @@
             <div class="flex justify-items-center items-center text-[14px] gap-1 text-lime-600 font-semibold mt-2" v-show="counter.Update_Code_Oder==3"><font-awesome-icon icon="fa-solid fa-circle-check" /><h1>Cập nhật đơn hàng thành công</h1></div>
         </div>
         <div class="flex flex-col justify-center items-center border-b-[1px] border-slate-700 w-full py-3 px-3">
-            <button class="flex flex-col bg-yellow-500 hover:bg-yellow-400 px-6 py-3 items-center justify-center rounded-full w-full text-slate-900 text-[16px] gap-2" >
+            <button v-on:click="counter.Show_bang_khach_hang=!counter.Show_bang_khach_hang" class="flex flex-col bg-yellow-500 hover:bg-yellow-400 px-6 py-3 items-center justify-center rounded-full w-full text-slate-900 text-[16px] gap-2" >
                 <div class="flex justify-items-center items-center gap-1 text-[18px]"><font-awesome-icon icon="fa-solid fa-credit-card" /><h1>Thanh toán</h1></div>
             </button>
         </div>
